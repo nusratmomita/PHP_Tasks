@@ -1,5 +1,5 @@
 <?php
-    $food = array("Apple","Orange","Banana");
+    $food = array('Apple',"Orange","Banana");
 
     array_push($food,"Pineapple" , "kiwi");
     //($food);

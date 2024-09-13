@@ -1,3 +1,25 @@
+<?php
+// INSERT INTO `task` (`No.`, `Task`, `Detail`, `time`) VALUES (NULL, 'Buy coffee', 'Have to buy coffee!!!', '2024-07-15 21:33:31'); 
+// Connecting to Database
+$db_server = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "crud";
+$conn = "";
+
+try
+    {
+        $conn = mysqli_connect($db_server,$db_user,$db_pass,$db_name);
+        //echo"connected";
+    }
+    
+    catch(mysqli_sql_exception)
+    {
+        echo "Not connected";
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -121,6 +143,16 @@
   </div>
   <div class="container">
     <?php
+      $query = "SELECT * FROM task";
+      $res = mysqli_query($conn,$query);
+
+      while($row = mysqli_fetch_assoc($res));
+      {
+        //echo "Done";
+        echo "Task No: " . $row['No.'] . ", Task: " . $row['Task'] . ", Detail: " . $row['Detail'] . ", Time: " . $row['time'] . "<br>";
+      }
+
+      //echo $sql;
     ?>
   </div>
   <!-- Optional JavaScript -->

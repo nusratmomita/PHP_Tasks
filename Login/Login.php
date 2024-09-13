@@ -14,7 +14,7 @@ if(isset($_POST))
 
     if($username == $user_name && $password == $pass_word)
     {
-        $_SESSION['username'] = $username;// applying nerdy to  $_SESSION['username'
+        $_SESSION['username'] = $username;// applying nerdy to  $_SESSION['username']
         echo "<div style='color: green; font-size: 20px; text-align: center; margin-top: 20px;'>{$user_name}, Welcome to the nerd world</div>";
     }
 

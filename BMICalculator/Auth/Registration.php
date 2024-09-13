@@ -25,7 +25,7 @@
             
             require_once "../db/db_connection.php";
 
-            // same username can not taken
+            // same username can not be taken
             $sql = "select * from appusers where username = '$username'";
             $res = mysqli_query($conn,$sql);
             $row_count = mysqli_num_rows($res);
