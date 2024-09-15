@@ -1,9 +1,9 @@
 <?php
 
-require "db_connection.php"; // Ensure this file establishes a connection to the MySQL server
+require "db_connection.php"; 
 
 try {
-    // If you want to create a database if it doesn't exist, use the following line:
+    //  if DB doesn't exist the:
     // $conn->exec("CREATE DATABASE IF NOT EXISTS bmi_php_app");
 
     // Select the database
